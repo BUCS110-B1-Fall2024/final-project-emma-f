@@ -2,11 +2,11 @@
 :warning: Everything between << >> needs to be replaced (remove << >> after replacing)
 
 # << Project Title >>
-## CS110 B1 Final Project  << Semester, Year >>
+## CS110 B1 Final Project Fall 2024
 
 ## Team Members
 
-<< List team member names >>
+Emma Flores
 
 ***
 
@@ -30,11 +30,11 @@
 
 ### Features
 
-1. << Feature 1 >>
-2. << Feature 2 >>
-3. << Feature 3 >>
-4. << Feature 4 >>
-5. << Feature 5 >>
+1. start menu
+2. moveable character
+3. obstacle collisions
+4. scrolling background
+5. game over screen
 
 ### Classes
 
