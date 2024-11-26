@@ -38,6 +38,10 @@ Emma Flores
 
 ### Classes
 
+- Class Character: This is the character the user plays as
+- Class Boy: This is the boy that the user meets
+- Class Seed: This is the interactive object that the user needs as they play
+- Class Ghost: These are the ghosts the user will meet along the way
 - << You should have a list of each of your classes with a description >>
 
 ## ATP

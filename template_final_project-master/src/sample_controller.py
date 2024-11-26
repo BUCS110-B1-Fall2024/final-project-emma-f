@@ -1,3 +1,7 @@
+from model_a import Character
+from model_a import Boy
+from model_a import Seed
+from ghost_model import Ghost
 
 class Controller:
   
