@@ -1,7 +1,6 @@
-from model_a import Character
-from model_a import Boy
-from model_a import Seed
-from ghost_model import Ghost
+from model_a import Cups
+from model_a import Cards
+from model_a import Deck
 
 class Controller:
   

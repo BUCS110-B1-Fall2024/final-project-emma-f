@@ -12,7 +12,7 @@ Emma Flores
 
 ## Project Description
 
-<< Give an overview of your project >>
+This is a card game where the player has to take turns with AI to place cards in cups and gain points. The player with the most points when all the cups are filled wins. There are two card phases (w/ two different types of cards) to create the opportunity to sabotage the other player to increase chances of winning.
 
 ***    
 
@@ -30,19 +30,17 @@ Emma Flores
 
 ### Features
 
-1. start menu
-2. moveable character
-3. obstacle collisions
-4. scrolling background
-5. game over screen
+1. Start menu
+2. Score tracking and display
+3. Drag-and-drop cards
+4. Animations and transitions for cards interactions
+5. winner screen
 
 ### Classes
 
-- Class Character: This is the character the user plays as
-- Class Boy: This is the boy that the user meets
-- Class Seed: This is the interactive object that the user needs as they play
-- Class Ghost: These are the ghosts the user will meet along the way
-- << You should have a list of each of your classes with a description >>
+- Class Cup: The 8 cups that will be on the playboard
+- Class Card: The cards that will be given to the player
+- Class Deck: The deck that the player can pull cards from
 
 ## ATP
 
