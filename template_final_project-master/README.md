@@ -12,7 +12,7 @@ Emma Flores
 
 ## Project Description
 
-This is a card game where the player has to take turns with AI to place cards in cups and gain points. The player with the most points when all the cups are filled wins. There are two card phases (w/ two different types of cards) to create the opportunity to sabotage the other player to increase chances of winning.
+This is a card game where the player has to take turns with a bot to place cards in cups and gain points. The player with the most points when all the cups are filled wins. There are two card phases (w/ two different decks) to create the opportunity to sabotage the other player to increase chances of winning.
 
 ***    
 
