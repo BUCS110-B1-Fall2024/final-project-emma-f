@@ -1,6 +1,5 @@
 import pygame 
-from random import randint
-from random import uniform
+import random
 
 class Asteroid(pygame.sprite.Sprite):
     def __init__(self, sprite, pos, groups):
@@ -9,10 +8,10 @@ class Asteroid(pygame.sprite.Sprite):
         self.image = sprite
         self.rect = self.image.get_frect(center = pos)
         self.start_time = pygame.time.get_ticks()
-        self.lifetime = 3000
-        self.direction = pygame.Vector2(uniform(-0.5, 0.5),1)
-        self.speed = randint(400,500)
-        self.rotation_speed = randint(40,80)
+        self.lifetime = 2000
+        self.direction = pygame.Vector2(random.uniform(-0.5, 0.5),1)
+        self.speed = random.randint(100,500)
+        self.rotation_speed = random.randint(40,80)
         self.rotation = 0
     
     def update(self, dt):

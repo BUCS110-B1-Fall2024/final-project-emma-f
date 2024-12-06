@@ -1,7 +1,7 @@
 
 :warning: Everything between << >> needs to be replaced (remove << >> after replacing)
 
-# << Project Title >>
+# Asteroid Shooter Game
 ## CS110 B1 Final Project Fall 2024
 
 ## Team Members
@@ -38,14 +38,17 @@ This is a shooter game, most similar to the game asteroids. Shoot as many astero
 
 ### Classes
 
-- Player class: 
-- Asteroid class:
-- laser class: 
+- Player class: loads img of ship, contains behavior of laser
+- Asteroid class: contains sprite, positions, number, and movement
+- Laser class: contains laser position
 
 ## ATP
 
 | Step                 |Procedure             |Expected Results                   |
 |----------------------|:--------------------:|----------------------------------:|
-|  1                   | Run Counter Program  |GUI window appears with count = 0  |
-|  2                   | click count button   | display changes to count = 1      |
+|  1                   | Press arrow keys     |the ship moves up, down, left, right|
+|  2                   | click to fire laser  | laser should release from ship    |
+|  3                   |fire laser at asteroid| laser make asteroid explode       |
+|  4                   | explode an asteroid  | score display should go up        |
+|  5                   |play until end of game| ending screen should pop up       |
 etc...
