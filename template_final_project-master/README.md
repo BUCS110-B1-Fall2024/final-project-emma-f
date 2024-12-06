@@ -12,7 +12,7 @@ Emma Flores
 
 ## Project Description
 
-This is a card game where the player has to take turns with a bot to place cards in cups and gain points. The player with the most points when all the cups are filled wins. There are two card phases (w/ two different decks) to create the opportunity to sabotage the other player to increase chances of winning.
+This is a shooter game, most similr to the game asteroids. Shoot as many asteroids as you can for the duration of the game and acheive the highest score. 
 
 ***    
 
@@ -32,15 +32,15 @@ This is a card game where the player has to take turns with a bot to place cards
 
 1. Start menu
 2. Score tracking and display
-3. Drag-and-drop cards
-4. Animations and transitions for cards interactions
-5. winner screen
+3. Moveable ship 
+4. Animations for explosions
+5. Moving asteroids
 
 ### Classes
 
-- Class Cup: The 8 cups that will be on the playboard
-- Class Card: The cards that will be given to the player
-- Class Deck: The deck that the player can pull cards from
+- Player class: 
+- Asteroid class:
+- laser class: 
 
 ## ATP
 
