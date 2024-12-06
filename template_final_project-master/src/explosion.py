@@ -3,7 +3,7 @@ import pygame
 class Explosion(pygame.sprite.Sprite):
     def __init__(self, frames, pos, groups):
         super().__init__(groups)
-        self.frames = frames
+        self.frames = [pygame.image.load(join('assets/images/explosions', f'{i}.png')).convert_alpha() for i in range(4)]
         self.frame_index = 0
         self.image = self.frames[self.frame_index]
         self.rect = self.image.get_frect(center = pos)

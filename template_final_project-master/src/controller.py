@@ -7,6 +7,7 @@ from sprites import all_sprites, asteroid, asteroid_sprites
 from collision import collisions
 from explosion import Explosion
 import random
+from os.path import join
 
 class Controller:
   
@@ -35,6 +36,7 @@ class Controller:
   pygame.quit()
     
   def display_score():
+    font = pygame.font.Font(join('assets/images/pixellettersfull.ttf'), 40)
     current_time = pygame.time.get_ticks() // 100
     text_surf = font.render(str(current_time), True, (240,240,240))
     text_rect = text_surf.get_frect(midbottom = (width / 2,height - 50))

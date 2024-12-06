@@ -5,7 +5,7 @@ class Asteroid(pygame.sprite.Sprite):
     def __init__(self, sprite, pos, groups):
         super().__init__(groups)
         self.original_surf = sprite
-        self.image = sprite
+        self.image = pygame.image.load(join('assets/images/asteroidsprite.png')).convert_alpha()
         self.rect = self.image.get_frect(center = pos)
         self.start_time = pygame.time.get_ticks()
         self.lifetime = 2000
