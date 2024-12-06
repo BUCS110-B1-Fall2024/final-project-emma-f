@@ -3,10 +3,10 @@ from random import randint
 from random import uniform
 
 class Asteroid(pygame.sprite.Sprite):
-    def __init__(self, surf, pos, groups):
+    def __init__(self, sprite, pos, groups):
         super().__init__(groups)
-        self.original_surf = surf
-        self.image = surf
+        self.original_surf = sprite
+        self.image = sprite
         self.rect = self.image.get_frect(center = pos)
         self.start_time = pygame.time.get_ticks()
         self.lifetime = 3000

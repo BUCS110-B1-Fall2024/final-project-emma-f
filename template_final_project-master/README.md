@@ -12,7 +12,7 @@ Emma Flores
 
 ## Project Description
 
-This is a shooter game, most similr to the game asteroids. Shoot as many asteroids as you can for the duration of the game and acheive the highest score. 
+This is a shooter game, most similar to the game asteroids. Shoot as many asteroids as you can for the duration of the game and acheive the highest score. 
 
 ***    
 
