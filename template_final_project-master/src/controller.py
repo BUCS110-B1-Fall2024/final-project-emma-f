@@ -3,7 +3,7 @@ from laser import Laser
 from player import Player
 from star import Star
 from asteroid import Asteroid
-from sprites import all_sprites, asteroid, asteroid_sprites
+from sprites import all_sprites, asteroid_sprites
 from collision import collisions
 from explosion import Explosion
 import random

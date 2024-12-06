@@ -17,7 +17,6 @@ class Player(pygame.sprite.Sprite):
         self.laser_shoot_time = 0
         self.cooldown_duration = 400
 
-        # mask 
         self.mask = pygame.mask.from_surface(self.image)
     
     def laser_timer(self):
