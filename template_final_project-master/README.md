@@ -33,14 +33,15 @@ This is a shooter game, most similar to the game asteroids. Shoot as many astero
 1. Start menu
 2. Score tracking and display
 3. Moveable ship 
-4. Animations for explosions
+4. Lives left tracking
 5. Moving asteroids
 
 ### Classes
 
-- Player class: loads img of ship, contains behavior of laser
+- Player class: loads img of ship, contains behavior of bullet
 - Asteroid class: contains sprite, positions, number, and movement
-- Laser class: contains laser position
+- Bullet class: contains bullet position
+- Button class: forms the buttons that are on the start menu
 
 ## ATP
 
@@ -48,7 +49,7 @@ This is a shooter game, most similar to the game asteroids. Shoot as many astero
 |----------------------|:--------------------:|----------------------------------:|
 |  1                   | Press arrow keys     |the ship moves up, down, left, right|
 |  2                   | click to fire laser  | laser should release from ship    |
-|  3                   |fire laser at asteroid| laser make asteroid explode       |
-|  4                   | explode an asteroid  | score display should go up        |
-|  5                   |play until end of game| ending screen should pop up       |
+|  3                   |fire laser at asteroid| laser make asteroid disappear       |
+|  4                   | get hit by asteroid   | lives score should go down        |
+|  5                   |play until end of game| should return to main menu       |
 etc...
