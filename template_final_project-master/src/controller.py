@@ -1,55 +1,67 @@
 import pygame
-from src.models import Player, Bullet, Asteroid, sprites, asteroid_surf
 import random
+from src.models import Player, Bullet, Asteroid, my_sprites, asteroid_surf, bullet_sprites, asteroid_sprites
+
+player = Player(my_sprites)
 
 class Controller:
   
   def __init__(self):
     #setup pygame data
-    self.w = 1200
-    self.h = 600
+    pygame.init()
+    self.width = 1200
+    self.height = 600
+    self.screen = pygame.display.set_mode((self.width, self.height))
+    pygame.display.set_caption('Space Shooter Game')
     self.clock = pygame.time.Clock()
-    self.screen = pygame.display.set_mode([self.w, self.h])
-    pygame.display.set_caption('Space Game')
-    self.bg = pygame.transform.scale((pygame.image.load('assets/images/bg.png')), (self.w,self.h))
-    self.p = Player(sprites)
-    self.time = self.clock.tick() / 1000 
+    self.font = pygame.font.Font('assets/pixellettersfull.ttf', 75)
     
   def mainloop(self):
     #select state loop
-    time = self.clock.tick() / 1000 
+    bg = pygame.transform.scale((pygame.image.load('assets/images/bg.png')), (self.width, self.height))
     running = True
+    
+    #creating asteroids
+    asteroidevent = pygame.event.custom_type()
+    pygame.time.set_timer(asteroidevent, 500)
+    
     while running:
+        dt = self.clock.tick() / 1000
+        #event loop
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 running = False
-
-            self.p.update(self.time)
-            self.screen.blit(self.bg, (0, 0))
-            sprites.draw(self.screen)
-            sprites.update(time)
-        pygame.display.flip()
+            if event.type == asteroidevent:
+                (x, y) = (random.randint(0, 1200), random.randint(-50, 10))
+                Asteroid(asteroid_surf, (x, y), (my_sprites, asteroid_sprites))
+        
+        #update
+        my_sprites.update(dt)
+        
+        #collision updates
+        for bullet in bullet_sprites:
+            collided = pygame.sprite.spritecollide(bullet, asteroid_sprites, True)
+            if collided:
+                bullet.kill()
+        
+        player_collided = pygame.sprite.spritecollide(player, asteroid_sprites, True)
+        if player_collided:
+            player.lives -= 1
+        if player.lives == 0:
+            running = False
+        
+        #redraw
+        self.screen.blit(bg, (0, 0))
+        
+        #display time passed/score
+        self.current_time = pygame.time.get_ticks() // 100
+        self.text_surf = self.font.render(str(self.current_time), True, 'blue')
+        self.text_rect = self.text_surf.get_rect(midbottom = (self.width/2, self.height - 20))
+        self.screen.blit(self.text_surf, self.text_rect)
+        my_sprites.draw(self.screen)
+        pygame.display.update()
+    
     pygame.quit()
+    
   
   ### below are some sample loop states ###
-def asteroidloop(self):
-      time = self.clock.tick() / 1000 
-      asteroid_event = pygame.event.custom_type()
-      pygame.time.set_timer(asteroid_event, 1000)
-      running = True
-      #event loop
-      while running:
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                running = False
-            if event.type == asteroid_event:
-                (x, y) = (random.randint(0, 1200), random.randint(0, 600))
-                Asteroid(asteroid_surf, (x, y), sprites)
-      #update data
-        sprites.update(time)
-      #redraw
-        sprites.draw(self.screen)
-        pygame.display.flip()
-      pygame.quit()
-      
-      
